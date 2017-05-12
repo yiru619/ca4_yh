@@ -42,3 +42,15 @@ print(len(data))
 
 #print first commit
 print(commits[0])
+
+#print last commit
+print(commits[-1])
+
+#print last commit author
+print(commits[-1]['author'])
+
+#print the number of commits
+print(len(commits))
+
+
+
