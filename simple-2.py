@@ -39,3 +39,6 @@ if __name__ == '__main__':
 
 #print the number of lines read
 print(len(data))
+
+#print first commit
+print(commits[0])
