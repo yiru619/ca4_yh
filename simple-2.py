@@ -34,4 +34,8 @@ if __name__ == '__main__':
     data = read_file(changes_file)
     commits = get_commits(data)
 
-print data
+#read file
+#print data
+
+#print the number of lines read
+print(len(data))
