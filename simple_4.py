@@ -39,7 +39,8 @@ def get_stat_keyword(commits,key):
         if stat_keyword[keyword] > max:
             max = stat_keyword[keyword]
             top_keyword=keyword
-    return {top_keyword:max}
+    return stat_keyword
+#{top_keyword:max}
 
 def get_commit_lines(commits, key):
     sum_line=0
@@ -107,26 +108,25 @@ print "staticstics by author, the top author committed", stat_author
 ####### to statistics the highest committed date
 
 stat_date = get_stat_keyword(commits, 'date')
-print "staticstics by date, the top date committed", stat_date
+#print "staticstics by date, the top date committed", stat_date
 
 #####################################################
 ####### to statistics the populor commit time
 
 stat_time = get_stat_keyword(commits, 'time')
-print "staticstics by time, the top time committed", stat_time
+#print "staticstics by time, the top time committed", stat_time
+
+stat_lines = get_stat_keyword(commits, 'number_of_lines')
+print "staticstics by number of lines, the top time committed", stat_lines
 
 #####################################################
 ####### to statistics the total lines of commits
 sum_line=get_commit_lines(commits,'number_of_lines')
 print "staticstics by number of lines and it committed", sum_line
 
-#####################################################
-####### to statistics the lines of commits
-sum_line=get_commit_lines(commits,'number_of_lines')
-print "staticstics by number of lines and it committed", sum_line
 
 #####################################################
-####### to statistics the committed in morning, afternoon and night
+####### to statistics the committed in morning and afternoon
 
 commit_range = get_commit_time_range(commits,'12:00:00')
 
