@@ -52,3 +52,18 @@ while True:
         break
 
 print(len(commits))
+
+commits.reverse()
+
+for index, commit in enumerate(commits):
+    print(commit.get_commit_comment())
+
+while index <len(data):
+    try:
+        author = data[index +1].split('|').strip()
+        if author in authors:
+            authors[author] = authors[author] + 1
+        else:
+            authors[author] = 1
+    except:
+        break
